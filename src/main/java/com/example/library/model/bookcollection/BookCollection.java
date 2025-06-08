@@ -1,6 +1,7 @@
 package com.example.library.model.bookcollection;
 
 import com.example.library.model.book.Book;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -18,6 +19,7 @@ public class BookCollection {
     private Long id;
     private String name;
 
+    @JsonIgnore
     @ManyToMany(mappedBy = "bookCollection")
     private Set<Book> books = new HashSet<>();
 

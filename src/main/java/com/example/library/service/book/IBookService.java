@@ -1,5 +1,6 @@
 package com.example.library.service.book;
 
+import com.example.library.dto.BookDto;
 import com.example.library.model.book.Book;
 import com.example.library.requests.AddBookRequest;
 import com.example.library.requests.BookUpdateRequest;
@@ -23,6 +24,8 @@ public interface IBookService {
     Long countBooksByAuthor(String author);
     Long countBooksByCollection(String bookCollection);
 
-
     Book saveBook(Book book);
+
+    List<BookDto> getConvertedBooks(List<Book> books);
+    BookDto convertToDto(Book book);
 }
