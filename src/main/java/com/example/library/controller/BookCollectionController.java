@@ -2,9 +2,8 @@ package com.example.library.controller;
 
 import com.example.library.exceptions.AlreadyExistsException;
 import com.example.library.exceptions.ResourceNotFoundException;
-import com.example.library.model.bookcollection.BookCollection;
+import com.example.library.model.BookCollection;
 import com.example.library.response.ApiResponse;
-import com.example.library.service.book.IBookService;
 import com.example.library.service.bookCollection.IBookCollectionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -13,7 +12,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
 import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 @org.springframework.web.bind.annotation.RestController

@@ -1,7 +1,7 @@
 package com.example.library.service.book;
 
 import com.example.library.dto.BookDto;
-import com.example.library.model.book.Book;
+import com.example.library.model.Book;
 import com.example.library.requests.AddBookRequest;
 import com.example.library.requests.BookUpdateRequest;
 

@@ -2,8 +2,8 @@ package com.example.library.service.image;
 
 import com.example.library.dto.ImageDto;
 import com.example.library.exceptions.ResourceNotFoundException;
-import com.example.library.model.book.Book;
-import com.example.library.model.image.Image;
+import com.example.library.model.Book;
+import com.example.library.model.Image;
 import com.example.library.repository.ImageRepository;
 import com.example.library.service.book.IBookService;
 import lombok.RequiredArgsConstructor;

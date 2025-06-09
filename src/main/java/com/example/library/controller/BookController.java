@@ -6,11 +6,9 @@ import com.example.library.exceptions.ResourceNotFoundException;
 import com.example.library.requests.AddBookRequest;
 import com.example.library.requests.BookUpdateRequest;
 import com.example.library.response.ApiResponse;
-import com.example.library.service.book.BookService;
-import com.example.library.model.book.Book;
+import com.example.library.model.Book;
 import com.example.library.service.book.IBookService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

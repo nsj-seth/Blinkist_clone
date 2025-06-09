@@ -1,15 +1,11 @@
-package com.example.library.model.user;
+package com.example.library.model;
 
-import com.example.library.model.book.Book;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.NaturalId;
-
-
-import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -26,6 +22,9 @@ public class User {
     @NaturalId
     private String email;
     private String password;
+
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    private Library library;
 
 //    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL,orphanRemoval = true)
 //    private List<Book> book;

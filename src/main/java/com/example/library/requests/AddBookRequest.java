@@ -1,10 +1,5 @@
 package com.example.library.requests;
 
-import ch.qos.logback.core.Appender;
-import com.example.library.model.bookcollection.BookCollection;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.JoinTable;
-import jakarta.persistence.ManyToMany;
 import lombok.Data;
 
 import java.util.Set;

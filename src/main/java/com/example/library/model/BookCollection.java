@@ -1,6 +1,5 @@
-package com.example.library.model.bookcollection;
+package com.example.library.model;
 
-import com.example.library.model.book.Book;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;

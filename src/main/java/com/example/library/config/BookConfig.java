@@ -1,19 +1,10 @@
 package com.example.library.config;
 
-import com.example.library.model.book.Book;
-import com.example.library.model.bookcollection.BookCollection;
-import com.example.library.repository.BookRepository;
-import com.example.library.repository.BookCollectionRepository;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.config.Configuration;
 import org.modelmapper.convention.MatchingStrategies;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
-import jakarta.transaction.Transactional;
-
-import java.util.HashSet;
-import java.util.Set;
 
 @RequiredArgsConstructor
 @org.springframework.context.annotation.Configuration

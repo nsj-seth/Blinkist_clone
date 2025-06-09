@@ -1,6 +1,6 @@
 package com.example.library.dto;
 
-import com.example.library.model.bookcollection.BookCollection;
+import com.example.library.model.BookCollection;
 import lombok.Data;
 
 import java.util.Set;

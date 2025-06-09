@@ -2,7 +2,7 @@ package com.example.library.service.bookCollection;
 
 import com.example.library.exceptions.AlreadyExistsException;
 import com.example.library.exceptions.ResourceNotFoundException;
-import com.example.library.model.bookcollection.BookCollection;
+import com.example.library.model.BookCollection;
 import com.example.library.repository.BookCollectionRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

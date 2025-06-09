@@ -1,10 +1,7 @@
-package com.example.library.model.book;
-import com.example.library.model.bookcollection.BookCollection;
-import com.example.library.model.image.Image;
+package com.example.library.model;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -41,6 +38,9 @@ public class Book {
     @OneToOne(mappedBy = "book", cascade = CascadeType.ALL, orphanRemoval = true)
     private Image image;
 
+    @OneToOne(mappedBy = "book")
+    private SavedItem savedItem;
+
     public Book(String title, String author, int chapters, String description,String about, int year, Set<BookCollection> bookCollection) {
         this.title = title;
         this.author = author;
@@ -50,11 +50,6 @@ public class Book {
         this.year = year;
         this.bookCollection = bookCollection;
     }
-
-
-
-
-
 
     @Override
     public String toString() {
