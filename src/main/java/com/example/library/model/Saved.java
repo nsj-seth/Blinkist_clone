@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -18,6 +19,7 @@ public class Saved {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private BigDecimal totalCapacity;
 
     @OneToMany(mappedBy = "saved", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<SavedItem> savedItems = new HashSet<>();
@@ -34,6 +36,14 @@ public class Saved {
 
     public void removeSavedItem(SavedItem savedItem) {
         savedItems.remove(savedItem);
-        savedItem.setSaved(null);
+        if (savedItem != null) {
+            savedItem.setSaved(null);
+            if (savedItem.getBook() != null) {
+                savedItem.getBook().setSavedItem(null);
+            }
+        }
     }
 }
+
+
+

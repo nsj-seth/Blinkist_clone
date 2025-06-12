@@ -28,8 +28,8 @@ public class BookController {
     @GetMapping("/all")
     public ResponseEntity<ApiResponse> getAllBooks() {
         List<Book> books = bookService.getAllBooks();
-
-        return ResponseEntity.ok(new ApiResponse("success", books));
+        List<BookDto> convertedBooks = bookService.getConvertedBooks(books);
+        return ResponseEntity.ok(new ApiResponse("success", convertedBooks));
     }
 
     // Get a book by ID

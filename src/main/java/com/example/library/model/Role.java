@@ -1,25 +1,27 @@
 package com.example.library.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Collection;
+import java.util.HashSet;
+
 @Entity
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
-public class Library {
+public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private String name;
 
-    @OneToOne(mappedBy = "library", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Saved saved;
+    public Role(String name) {
+        this.name = name;
+    }
 
-    @OneToOne
-    @JoinColumn(name = "user_id")
-    private User user;
+    @ManyToMany(mappedBy = "roles")
+    private Collection<User> users = new HashSet<>();
 }

@@ -4,51 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02cbd175-7836-439c-9e6c-b17d2abbbd0e" name="Changes" comment="book collection class added and updated">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/library/controller/ImageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/library/model/Saved.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/library/repository/SavedRepository.java" afterDir="false" />
+    <list default="true" id="02cbd175-7836-439c-9e6c-b17d2abbbd0e" name="Changes" comment="book collection class added and updated&#10;saved section of user library created, library item(wrapper) added">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/library/controller/LibraryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/library/controller/SavedController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/library/controller/SavedItemController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/library/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/library/dto/LibraryDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/library/dto/SavedDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/library/dto/SavedItemDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/library/dto/UserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/library/model/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/library/repository/LibraryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/library/repository/SavedItemRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/library/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/library/requests/CreateUserRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/library/requests/UserUpdateRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/library/service/library/ILibraryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/library/service/library/LibraryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/library/service/saved/ISavedService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/library/service/saved/SavedService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/library/service/savedItem/ISavedItemService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/library/service/savedItem/SavedItemService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/library/service/user/IUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/library/service/user/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/library/config/BookConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/library/config/BookConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/library/controller/BookCollectionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/library/controller/BookCollectionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/library/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/library/controller/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/library/dto/BookDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/library/dto/BookDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/library/model/book/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/library/model/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/library/model/bookcollection/BookCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/library/model/BookCollection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/library/model/image/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/library/model/Image.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/library/model/library/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/library/model/Library.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/library/model/libraryitem/LibraryItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/library/model/SavedItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/library/model/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/library/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/library/repository/BookCollectionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/library/repository/BookCollectionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/library/repository/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/library/repository/BookRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/library/repository/ImageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/library/repository/ImageRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/library/requests/AddBookRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/library/requests/AddBookRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/library/service/book/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/library/service/book/BookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/library/service/book/IBookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/library/service/book/IBookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/library/service/bookCollection/BookCollectionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/library/service/bookCollection/BookCollectionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/library/service/bookCollection/IBookCollectionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/library/service/bookCollection/IBookCollectionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/library/service/image/IImageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/library/service/image/IImageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/library/service/image/ImageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/library/service/image/ImageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/library/config/BookConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/library/config/BookConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/library/model/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/library/model/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/library/model/Saved.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/library/model/Saved.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/library/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/library/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/library/repository/SavedRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/library/repository/SavedRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/library/controller/BookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/library/controller/BookController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/library/model/book/Book.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/library/model/bookcollection/BookCollection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/library/model/image/Image.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/library/model/library/Library.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/library/model/libraryitem/LibraryItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/library/model/user/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/library/repository/BookCollectionRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/library/repository/BookCollectionRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/library/repository/BookRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/library/repository/BookRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/library/repository/ImageRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/library/repository/ImageRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/library/requests/AddBookRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/library/requests/AddBookRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/library/service/book/BookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/library/service/book/BookService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/library/service/book/IBookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/library/service/book/IBookService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/library/service/bookCollection/BookCollectionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/library/service/bookCollection/BookCollectionService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/library/service/bookCollection/IBookCollectionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/library/service/bookCollection/IBookCollectionService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/library/service/image/IImageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/library/service/image/IImageService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/library/service/image/ImageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/library/service/image/ImageService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,6 +123,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.library.dto" />
+      <recent name="com.example.library.requests" />
       <recent name="com.example.library.model" />
       <recent name="com.example.library.repository" />
       <recent name="com.example.library.exceptions" />
@@ -210,7 +197,8 @@
       <workItem from="1749336235295" duration="6139000" />
       <workItem from="1749383155799" duration="1689000" />
       <workItem from="1749426304114" duration="3907000" />
-      <workItem from="1749484342044" duration="345000" />
+      <workItem from="1749484342044" duration="5440000" />
+      <workItem from="1749746698224" duration="12403000" />
     </task>
     <task id="LOCAL-00001" summary="a lot of added stuff 😂">
       <option name="closed" value="true" />
@@ -236,7 +224,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749342751290</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="book collection class added and updated&#10;saved section of user library created, library item(wrapper) added">
+      <option name="closed" value="true" />
+      <created>1749485004653</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1749485004653</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,7 +254,8 @@
     <MESSAGE value="a lot of added stuff " />
     <MESSAGE value="project structure altered" />
     <MESSAGE value="book collection class added and updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="book collection class added and updated" />
+    <MESSAGE value="book collection class added and updated&#10;saved section of user library created, library item(wrapper) added" />
+    <option name="LAST_COMMIT_MESSAGE" value="book collection class added and updated&#10;saved section of user library created, library item(wrapper) added" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
