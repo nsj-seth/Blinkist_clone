@@ -1,0 +1,6 @@
+{
+  "timestamp": "2025-06-07T22:54:29.259+00:00",
+  "status": 404,
+  "error": "Not Found",
+  "path": "/api/v1/book-collections/all"
+}

@@ -1,0 +1,27 @@
+GET http://localhost:8080/api/v1/book-collections/all
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-06-07T225429.404.json
+
+###
+
+GET http://localhost:8080/api/v1/books/all
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-06-07T140358.200.json
+
+###
+
+GET http://localhost:8080/ap1/v1/books/all
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-06-07T140340.404.json
+
+###
+
