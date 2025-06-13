@@ -65,25 +65,28 @@ public class SavedItemService implements ISavedItemService{
     public void removeItemFromSaved(Long bookId) {
         SavedItem savedItem = savedItemRepository.findByBookId(bookId)
                 .orElseThrow(() -> new ResourceNotFoundException("Book not found in saved items"));
-        // Get the Saved entity
+
+        Book book = savedItem.getBook();
         Saved saved = savedItem.getSaved();
 
-        // Remove the reference from the book
-        Book book = savedItem.getBook();
+        // Remove references
         if (book != null) {
             book.setSavedItem(null);
         }
+        if (saved != null) {
+            saved.getSavedItems().remove(savedItem);
+        }
 
-        // Remove from the saved collection's set
-        saved.getSavedItems().remove(savedItem);
+        savedItem.setBook(null);
+        savedItem.setSaved(null);
 
-
-        // Delete the saved item
+        // Delete the item
         savedItemRepository.delete(savedItem);
-
     }
 
-    @Override
+
+
+@Override
     public SavedItemDto convertSavedItemToDto(SavedItem savedItem) {
         SavedItemDto savedItemDto = modelMapper.map(savedItem, SavedItemDto.class);
         return savedItemDto;

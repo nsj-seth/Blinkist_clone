@@ -21,10 +21,10 @@ public class SavedItemController {
     private final ISavedItemService savedItemService;
 
 
-    @PostMapping("/save/{libraryId}/{bookId}")
+    @PostMapping("/save")
     public ResponseEntity<ApiResponse> saveBookToLibrary(
-            @PathVariable Long libraryId,
-            @PathVariable Long bookId) {
+            @RequestParam Long libraryId,
+            @RequestParam Long bookId) {
         try {
             SavedItem savedItem = savedItemService.saveBookToSaved(libraryId, bookId);
             SavedItemDto savedItemDto = savedItemService.convertSavedItemToDto(savedItem);

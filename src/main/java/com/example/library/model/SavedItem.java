@@ -20,7 +20,18 @@ public class SavedItem {
     @JoinColumn(name = "book_id")
     private Book book;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "saved_id")
     private Saved saved;
+
+    @PreRemove
+    private void preRemove() {
+        if (book != null) {
+            book.setSavedItem(null);
+        }
+        if (saved != null) {
+            saved.getSavedItems().remove(this);
+        }
+    }
+
 }

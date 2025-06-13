@@ -35,14 +35,15 @@ public class Saved {
     }
 
     public void removeSavedItem(SavedItem savedItem) {
-        savedItems.remove(savedItem);
-        if (savedItem != null) {
+        if (savedItem != null && savedItems.contains(savedItem)) {
+            savedItems.remove(savedItem);
             savedItem.setSaved(null);
             if (savedItem.getBook() != null) {
                 savedItem.getBook().setSavedItem(null);
             }
         }
     }
+
 }
 
 

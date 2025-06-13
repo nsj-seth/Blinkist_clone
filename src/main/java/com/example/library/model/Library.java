@@ -19,7 +19,7 @@ public class Library {
     @OneToOne(mappedBy = "library", cascade = CascadeType.ALL, orphanRemoval = true)
     private Saved saved;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private User user;
 }

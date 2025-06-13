@@ -3,7 +3,15 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.53">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <Grants>16668||-9223372036854775808|c|G
+      <Grants>1||-9223372036854775808|c|G
+1||10|c|G
+1||10|C|G
+1||10|T|G
+4||-9223372036854775808|c|G
+4||10|c|G
+4||10|C|G
+4||10|T|G
+16668||-9223372036854775808|c|G
 16668||10|c|G
 16668||10|C|G
 16668||-9223372036854775808|T|G
@@ -18,9 +26,9 @@
 44102||10|C|G
 44102||-9223372036854775808|T|G
 44102||10|T|G</Grants>
-      <IntrospectionStateNumber>2648</IntrospectionStateNumber>
+      <IntrospectionStateNumber>2852</IntrospectionStateNumber>
       <ServerVersion>17.4</ServerVersion>
-      <StartupTime>1749087999</StartupTime>
+      <StartupTime>1749642392</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -819,7 +827,7 @@ false Zulu
 14751||10|C|G
 14751||-9223372036854775808|U|G
 14751||10|U|G</Grants>
-      <IntrospectionStateNumber>2648</IntrospectionStateNumber>
+      <IntrospectionStateNumber>2852</IntrospectionStateNumber>
       <ObjectId>44102</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4271,41 +4279,41 @@ false Zulu
     <schema id="271" parent="3" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>2648</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2025-06-09.00:31:08</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>2852</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2025-06-13.19:05:10</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>532</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
     <sequence id="272" parent="271" name="book_collections_id_seq">
-      <ObjectId>44189</ObjectId>
+      <ObjectId>52418</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>2601</StateNumber>
+      <StateNumber>2815</StateNumber>
       <StoredType>bigint|0s</StoredType>
       <OwnerName>postgres</OwnerName>
     </sequence>
     <sequence id="273" parent="271" name="books_id_seq">
-      <ObjectId>44200</ObjectId>
+      <ObjectId>52429</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>2603</StateNumber>
+      <StateNumber>2817</StateNumber>
       <StoredType>bigint|0s</StoredType>
       <OwnerName>postgres</OwnerName>
     </sequence>
     <sequence id="274" parent="271" name="image_id_seq">
-      <ObjectId>44208</ObjectId>
+      <ObjectId>52437</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>2604</StateNumber>
+      <StateNumber>2818</StateNumber>
       <StoredType>bigint|0s</StoredType>
       <OwnerName>postgres</OwnerName>
     </sequence>
     <sequence id="275" parent="271" name="library_id_seq">
-      <ObjectId>44216</ObjectId>
+      <ObjectId>52447</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>2605</StateNumber>
+      <StateNumber>2819</StateNumber>
       <StoredType>bigint|0s</StoredType>
       <OwnerName>postgres</OwnerName>
     </sequence>
@@ -4317,380 +4325,372 @@ false Zulu
       <StoredType>bigint|0s</StoredType>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <sequence id="277" parent="271" name="saved_id_seq">
-      <ObjectId>44279</ObjectId>
+    <sequence id="277" parent="271" name="role_id_seq">
+      <ObjectId>52455</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>2638</StateNumber>
+      <StateNumber>2820</StateNumber>
       <StoredType>bigint|0s</StoredType>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <sequence id="278" parent="271" name="saved_item_id_seq">
-      <ObjectId>44285</ObjectId>
+    <sequence id="278" parent="271" name="saved_id_seq">
+      <ObjectId>52461</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>2639</StateNumber>
+      <StateNumber>2821</StateNumber>
       <StoredType>bigint|0s</StoredType>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <sequence id="279" parent="271" name="users_id_seq">
-      <ObjectId>44228</ObjectId>
+    <sequence id="279" parent="271" name="saved_item_id_seq">
+      <ObjectId>52469</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>2607</StateNumber>
+      <StateNumber>2822</StateNumber>
       <StoredType>bigint|0s</StoredType>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <table id="280" parent="271" name="book_collections">
-      <ObjectId>44190</ObjectId>
-      <StateNumber>2616</StateNumber>
+    <sequence id="280" parent="271" name="users_id_seq">
+      <ObjectId>52480</ObjectId>
+      <SequenceIdentity>1</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>2824</StateNumber>
+      <StoredType>bigint|0s</StoredType>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <table id="281" parent="271" name="book_collections">
+      <ObjectId>52419</ObjectId>
+      <StateNumber>2825</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="281" parent="271" name="book_collections_mapping">
-      <ObjectId>44195</ObjectId>
-      <StateNumber>2616</StateNumber>
+    <table id="282" parent="271" name="book_collections_mapping">
+      <ObjectId>52424</ObjectId>
+      <StateNumber>2825</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="282" parent="271" name="books">
-      <ObjectId>44201</ObjectId>
-      <StateNumber>2617</StateNumber>
+    <table id="283" parent="271" name="books">
+      <ObjectId>52430</ObjectId>
+      <StateNumber>2826</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="283" parent="271" name="image">
-      <ObjectId>44209</ObjectId>
-      <StateNumber>2618</StateNumber>
+    <table id="284" parent="271" name="image">
+      <ObjectId>52438</ObjectId>
+      <StateNumber>2827</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="284" parent="271" name="library">
-      <ObjectId>44217</ObjectId>
-      <StateNumber>2637</StateNumber>
+    <table id="285" parent="271" name="library">
+      <ObjectId>52448</ObjectId>
+      <StateNumber>2828</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="285" parent="271" name="library_item">
+    <table id="286" parent="271" name="library_item">
       <ObjectId>44223</ObjectId>
       <StateNumber>2620</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="286" parent="271" name="saved">
-      <ObjectId>44280</ObjectId>
-      <StateNumber>2644</StateNumber>
+    <table id="287" parent="271" name="role">
+      <ObjectId>52456</ObjectId>
+      <StateNumber>2832</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="287" parent="271" name="saved_item">
-      <ObjectId>44286</ObjectId>
-      <StateNumber>2645</StateNumber>
+    <table id="288" parent="271" name="saved">
+      <ObjectId>52462</ObjectId>
+      <StateNumber>2829</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="288" parent="271" name="users">
-      <ObjectId>44229</ObjectId>
-      <StateNumber>2619</StateNumber>
+    <table id="289" parent="271" name="saved_item">
+      <ObjectId>52470</ObjectId>
+      <StateNumber>2830</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <column id="289" parent="280" name="id">
+    <table id="290" parent="271" name="user_roles">
+      <ObjectId>52477</ObjectId>
+      <StateNumber>2832</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="291" parent="271" name="users">
+      <ObjectId>52481</ObjectId>
+      <StateNumber>2828</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <column id="292" parent="281" name="id">
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>2601</StateNumber>
+      <StateNumber>2815</StateNumber>
       <StoredType>bigint|0s</StoredType>
-      <SequenceId>44189</SequenceId>
+      <SequenceId>52418</SequenceId>
       <TypeId>20</TypeId>
     </column>
-    <column id="290" parent="280" name="name">
+    <column id="293" parent="281" name="name">
       <Position>2</Position>
-      <StateNumber>2601</StateNumber>
+      <StateNumber>2815</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <index id="291" parent="280" name="book_collections_pkey">
+    <index id="294" parent="281" name="book_collections_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>44193</ObjectId>
+      <ObjectId>52422</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>2601</StateNumber>
+      <StateNumber>2815</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="292" parent="280" name="book_collections_pkey">
+    <key id="295" parent="281" name="book_collections_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>44194</ObjectId>
+      <ObjectId>52423</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>2601</StateNumber>
-      <UnderlyingIndexId>44193</UnderlyingIndexId>
+      <StateNumber>2815</StateNumber>
+      <UnderlyingIndexId>52422</UnderlyingIndexId>
     </key>
-    <column id="293" parent="281" name="book_id">
+    <column id="296" parent="282" name="book_id">
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>2602</StateNumber>
+      <StateNumber>2816</StateNumber>
       <StoredType>bigint|0s</StoredType>
       <TypeId>20</TypeId>
     </column>
-    <column id="294" parent="281" name="collection_id">
+    <column id="297" parent="282" name="collection_id">
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>2602</StateNumber>
+      <StateNumber>2816</StateNumber>
       <StoredType>bigint|0s</StoredType>
       <TypeId>20</TypeId>
     </column>
-    <foreign-key id="295" parent="281" name="fkpeqqj3f8w86yjby53q156odi5">
+    <foreign-key id="298" parent="282" name="fkpeqqj3f8w86yjby53q156odi5">
       <ColNames>book_id</ColNames>
-      <ObjectId>44249</ObjectId>
-      <StateNumber>2617</StateNumber>
-      <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>44201</RefTableId>
+      <ObjectId>52495</ObjectId>
+      <StateNumber>2826</StateNumber>
+      <RefKeyColPositions>3</RefKeyColPositions>
+      <RefTableId>52430</RefTableId>
     </foreign-key>
-    <foreign-key id="296" parent="281" name="fks7iecorq4nawkw6073sqjdsoc">
+    <foreign-key id="299" parent="282" name="fks7iecorq4nawkw6073sqjdsoc">
       <ColNames>collection_id</ColNames>
-      <ObjectId>44244</ObjectId>
-      <StateNumber>2616</StateNumber>
+      <ObjectId>52490</ObjectId>
+      <StateNumber>2825</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>44190</RefTableId>
+      <RefTableId>52419</RefTableId>
     </foreign-key>
-    <index id="297" parent="281" name="book_collections_mapping_pkey">
+    <index id="300" parent="282" name="book_collections_mapping_pkey">
       <ColNames>book_id
 collection_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>44198</ObjectId>
+      <ObjectId>52427</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>2602</StateNumber>
+      <StateNumber>2816</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="298" parent="281" name="book_collections_mapping_pkey">
+    <key id="301" parent="282" name="book_collections_mapping_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>44199</ObjectId>
+      <ObjectId>52428</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>2602</StateNumber>
-      <UnderlyingIndexId>44198</UnderlyingIndexId>
+      <StateNumber>2816</StateNumber>
+      <UnderlyingIndexId>52427</UnderlyingIndexId>
     </key>
-    <column id="299" parent="282" name="id">
-      <IdentityKind>by-default</IdentityKind>
+    <column id="302" parent="283" name="chapters">
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>2603</StateNumber>
+      <StateNumber>2817</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="303" parent="283" name="year">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>2817</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="304" parent="283" name="id">
+      <IdentityKind>by-default</IdentityKind>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>2817</StateNumber>
       <StoredType>bigint|0s</StoredType>
-      <SequenceId>44200</SequenceId>
+      <SequenceId>52429</SequenceId>
       <TypeId>20</TypeId>
     </column>
-    <column id="300" parent="282" name="about">
-      <Position>2</Position>
-      <StateNumber>2603</StateNumber>
-      <StoredType>varchar(255)|0s</StoredType>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="301" parent="282" name="author">
-      <Position>3</Position>
-      <StateNumber>2603</StateNumber>
-      <StoredType>varchar(255)|0s</StoredType>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="302" parent="282" name="chapters">
-      <NotNull>1</NotNull>
+    <column id="305" parent="283" name="about">
       <Position>4</Position>
-      <StateNumber>2603</StateNumber>
-      <StoredType>integer|0s</StoredType>
-      <TypeId>23</TypeId>
+      <StateNumber>2817</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
     </column>
-    <column id="303" parent="282" name="description">
+    <column id="306" parent="283" name="author">
       <Position>5</Position>
-      <StateNumber>2603</StateNumber>
+      <StateNumber>2817</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="304" parent="282" name="title">
+    <column id="307" parent="283" name="description">
       <Position>6</Position>
-      <StateNumber>2603</StateNumber>
+      <StateNumber>2817</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="305" parent="282" name="year">
-      <NotNull>1</NotNull>
+    <column id="308" parent="283" name="title">
       <Position>7</Position>
-      <StateNumber>2603</StateNumber>
-      <StoredType>integer|0s</StoredType>
-      <TypeId>23</TypeId>
+      <StateNumber>2817</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
     </column>
-    <index id="306" parent="282" name="books_pkey">
+    <index id="309" parent="283" name="books_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>44206</ObjectId>
+      <ObjectId>52435</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>2603</StateNumber>
+      <StateNumber>2817</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="307" parent="282" name="books_pkey">
+    <key id="310" parent="283" name="books_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>44207</ObjectId>
+      <ObjectId>52436</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>2603</StateNumber>
-      <UnderlyingIndexId>44206</UnderlyingIndexId>
+      <StateNumber>2817</StateNumber>
+      <UnderlyingIndexId>52435</UnderlyingIndexId>
     </key>
-    <column id="308" parent="283" name="id">
-      <IdentityKind>by-default</IdentityKind>
-      <NotNull>1</NotNull>
+    <column id="311" parent="284" name="book_id">
       <Position>1</Position>
-      <StateNumber>2604</StateNumber>
+      <StateNumber>2818</StateNumber>
       <StoredType>bigint|0s</StoredType>
-      <SequenceId>44208</SequenceId>
       <TypeId>20</TypeId>
     </column>
-    <column id="309" parent="283" name="download_url">
+    <column id="312" parent="284" name="id">
+      <IdentityKind>by-default</IdentityKind>
+      <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>2604</StateNumber>
-      <StoredType>varchar(255)|0s</StoredType>
-      <TypeId>1043</TypeId>
+      <StateNumber>2818</StateNumber>
+      <StoredType>bigint|0s</StoredType>
+      <SequenceId>52437</SequenceId>
+      <TypeId>20</TypeId>
     </column>
-    <column id="310" parent="283" name="file_name">
+    <column id="313" parent="284" name="download_url">
       <Position>3</Position>
-      <StateNumber>2604</StateNumber>
+      <StateNumber>2818</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="311" parent="283" name="file_type">
+    <column id="314" parent="284" name="file_name">
       <Position>4</Position>
-      <StateNumber>2604</StateNumber>
+      <StateNumber>2818</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="312" parent="283" name="image">
+    <column id="315" parent="284" name="file_type">
       <Position>5</Position>
-      <StateNumber>2604</StateNumber>
+      <StateNumber>2818</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="316" parent="284" name="image">
+      <Position>6</Position>
+      <StateNumber>2818</StateNumber>
       <StoredType>oid|0s</StoredType>
       <TypeId>26</TypeId>
     </column>
-    <column id="313" parent="283" name="book_id">
-      <Position>6</Position>
-      <StateNumber>2604</StateNumber>
-      <StoredType>bigint|0s</StoredType>
-      <TypeId>20</TypeId>
-    </column>
-    <foreign-key id="314" parent="283" name="fk1x4slc19br0o6h6nxmjdkp103">
+    <foreign-key id="317" parent="284" name="fk1x4slc19br0o6h6nxmjdkp103">
       <ColNames>book_id</ColNames>
-      <ObjectId>44254</ObjectId>
-      <StateNumber>2618</StateNumber>
-      <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>44201</RefTableId>
+      <ObjectId>52500</ObjectId>
+      <StateNumber>2827</StateNumber>
+      <RefKeyColPositions>3</RefKeyColPositions>
+      <RefTableId>52430</RefTableId>
     </foreign-key>
-    <index id="315" parent="283" name="image_pkey">
+    <index id="318" parent="284" name="image_book_id_key">
+      <ColNames>book_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>52445</ObjectId>
+      <StateNumber>2818</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <index id="319" parent="284" name="image_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>44214</ObjectId>
+      <ObjectId>52443</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>2604</StateNumber>
+      <StateNumber>2818</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="316" parent="283" name="ukpjrssxb9c1ejlrh3rwnq61mog">
-      <ColNames>book_id</ColNames>
-      <ObjectId>44236</ObjectId>
-      <StateNumber>2609</StateNumber>
-      <Unique>1</Unique>
-      <AccessMethodId>403</AccessMethodId>
-    </index>
-    <key id="317" parent="283" name="image_pkey">
+    <key id="320" parent="284" name="image_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>44215</ObjectId>
+      <ObjectId>52444</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>2604</StateNumber>
-      <UnderlyingIndexId>44214</UnderlyingIndexId>
+      <StateNumber>2818</StateNumber>
+      <UnderlyingIndexId>52443</UnderlyingIndexId>
     </key>
-    <key id="318" parent="283" name="ukpjrssxb9c1ejlrh3rwnq61mog">
-      <ObjectId>44237</ObjectId>
-      <StateNumber>2609</StateNumber>
-      <UnderlyingIndexId>44236</UnderlyingIndexId>
+    <key id="321" parent="284" name="image_book_id_key">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>52446</ObjectId>
+      <StateNumber>2818</StateNumber>
+      <UnderlyingIndexId>52445</UnderlyingIndexId>
     </key>
-    <column id="319" parent="284" name="id">
+    <column id="322" parent="285" name="id">
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>2605</StateNumber>
+      <StateNumber>2819</StateNumber>
       <StoredType>bigint|0s</StoredType>
-      <SequenceId>44216</SequenceId>
+      <SequenceId>52447</SequenceId>
       <TypeId>20</TypeId>
     </column>
-    <column id="320" parent="284" name="capacity">
-      <NotNull>1</NotNull>
+    <column id="323" parent="285" name="user_id">
       <Position>2</Position>
-      <StateNumber>2605</StateNumber>
-      <StoredType>integer|0s</StoredType>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="321" parent="284" name="user_id">
-      <Position>3</Position>
-      <StateNumber>2605</StateNumber>
+      <StateNumber>2819</StateNumber>
       <StoredType>bigint|0s</StoredType>
       <TypeId>20</TypeId>
     </column>
-    <column id="322" parent="284" name="saved_id">
-      <Position>4</Position>
-      <StateNumber>2637</StateNumber>
-      <StoredType>bigint|0s</StoredType>
-      <TypeId>20</TypeId>
-    </column>
-    <foreign-key id="323" parent="284" name="fk7wjl27o7bpq397tyneve3vwl2">
+    <foreign-key id="324" parent="285" name="fk7wjl27o7bpq397tyneve3vwl2">
       <ColNames>user_id</ColNames>
-      <ObjectId>44259</ObjectId>
-      <StateNumber>2619</StateNumber>
+      <ObjectId>52505</ObjectId>
+      <StateNumber>2828</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>44229</RefTableId>
+      <RefTableId>52481</RefTableId>
     </foreign-key>
-    <foreign-key id="324" parent="284" name="fkhk43ayhxhty0m47ru9kfrd4rm">
-      <ColNames>saved_id</ColNames>
-      <ObjectId>44295</ObjectId>
-      <StateNumber>2644</StateNumber>
-      <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>44280</RefTableId>
-    </foreign-key>
-    <index id="325" parent="284" name="library_pkey">
+    <index id="325" parent="285" name="library_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>44220</ObjectId>
+      <ObjectId>52451</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>2605</StateNumber>
+      <StateNumber>2819</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="326" parent="284" name="uk9xptvbkcxlmkl02gn6fqyitrx">
+    <index id="326" parent="285" name="library_user_id_key">
       <ColNames>user_id</ColNames>
-      <ObjectId>44238</ObjectId>
-      <StateNumber>2611</StateNumber>
-      <Unique>1</Unique>
-      <AccessMethodId>403</AccessMethodId>
-    </index>
-    <index id="327" parent="284" name="ukdy1h427k1xx3w5h8wqt24yr1x">
-      <ColNames>saved_id</ColNames>
-      <ObjectId>44291</ObjectId>
-      <StateNumber>2641</StateNumber>
-      <Unique>1</Unique>
-      <AccessMethodId>403</AccessMethodId>
-    </index>
-    <key id="328" parent="284" name="library_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>44221</ObjectId>
+      <ObjectId>52453</ObjectId>
+      <StateNumber>2819</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="327" parent="285" name="library_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>52452</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>2605</StateNumber>
-      <UnderlyingIndexId>44220</UnderlyingIndexId>
+      <StateNumber>2819</StateNumber>
+      <UnderlyingIndexId>52451</UnderlyingIndexId>
     </key>
-    <key id="329" parent="284" name="uk9xptvbkcxlmkl02gn6fqyitrx">
-      <ObjectId>44239</ObjectId>
-      <StateNumber>2611</StateNumber>
-      <UnderlyingIndexId>44238</UnderlyingIndexId>
+    <key id="328" parent="285" name="library_user_id_key">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>52454</ObjectId>
+      <StateNumber>2819</StateNumber>
+      <UnderlyingIndexId>52453</UnderlyingIndexId>
     </key>
-    <key id="330" parent="284" name="ukdy1h427k1xx3w5h8wqt24yr1x">
-      <ObjectId>44292</ObjectId>
-      <StateNumber>2641</StateNumber>
-      <UnderlyingIndexId>44291</UnderlyingIndexId>
-    </key>
-    <column id="331" parent="285" name="id">
+    <column id="329" parent="286" name="id">
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -4699,33 +4699,19 @@ collection_id</ColNames>
       <SequenceId>44222</SequenceId>
       <TypeId>20</TypeId>
     </column>
-    <column id="332" parent="285" name="book_id">
+    <column id="330" parent="286" name="book_id">
       <Position>2</Position>
       <StateNumber>2606</StateNumber>
       <StoredType>bigint|0s</StoredType>
       <TypeId>20</TypeId>
     </column>
-    <column id="333" parent="285" name="library_id">
+    <column id="331" parent="286" name="library_id">
       <Position>3</Position>
       <StateNumber>2606</StateNumber>
       <StoredType>bigint|0s</StoredType>
       <TypeId>20</TypeId>
     </column>
-    <foreign-key id="334" parent="285" name="fkj9eyg1mgap0fyhbo9xurn13no">
-      <ColNames>book_id</ColNames>
-      <ObjectId>44264</ObjectId>
-      <StateNumber>2620</StateNumber>
-      <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>44201</RefTableId>
-    </foreign-key>
-    <foreign-key id="335" parent="285" name="fkb6p8rwxpcqrl2n3l3sw7dbo8m">
-      <ColNames>library_id</ColNames>
-      <ObjectId>44269</ObjectId>
-      <StateNumber>2621</StateNumber>
-      <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>44217</RefTableId>
-    </foreign-key>
-    <index id="336" parent="285" name="library_item_pkey">
+    <index id="332" parent="286" name="library_item_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>44226</ObjectId>
@@ -4734,176 +4720,287 @@ collection_id</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="337" parent="285" name="ukbhp75gpbin3wsyi2nfp6y4hu4">
+    <index id="333" parent="286" name="ukbhp75gpbin3wsyi2nfp6y4hu4">
       <ColNames>book_id</ColNames>
       <ObjectId>44240</ObjectId>
       <StateNumber>2613</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="338" parent="285" name="library_item_pkey">
+    <key id="334" parent="286" name="library_item_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>44227</ObjectId>
       <Primary>1</Primary>
       <StateNumber>2606</StateNumber>
       <UnderlyingIndexId>44226</UnderlyingIndexId>
     </key>
-    <key id="339" parent="285" name="ukbhp75gpbin3wsyi2nfp6y4hu4">
+    <key id="335" parent="286" name="ukbhp75gpbin3wsyi2nfp6y4hu4">
       <ObjectId>44241</ObjectId>
       <StateNumber>2613</StateNumber>
       <UnderlyingIndexId>44240</UnderlyingIndexId>
     </key>
-    <column id="340" parent="286" name="id">
+    <column id="336" parent="287" name="id">
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>2638</StateNumber>
+      <StateNumber>2820</StateNumber>
       <StoredType>bigint|0s</StoredType>
-      <SequenceId>44279</SequenceId>
+      <SequenceId>52455</SequenceId>
       <TypeId>20</TypeId>
     </column>
-    <index id="341" parent="286" name="saved_pkey">
+    <column id="337" parent="287" name="name">
+      <Position>2</Position>
+      <StateNumber>2820</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="338" parent="287" name="role_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>44283</ObjectId>
+      <ObjectId>52459</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>2638</StateNumber>
+      <StateNumber>2820</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="342" parent="286" name="saved_pkey">
+    <key id="339" parent="287" name="role_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>44284</ObjectId>
+      <ObjectId>52460</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>2638</StateNumber>
-      <UnderlyingIndexId>44283</UnderlyingIndexId>
+      <StateNumber>2820</StateNumber>
+      <UnderlyingIndexId>52459</UnderlyingIndexId>
     </key>
-    <column id="343" parent="287" name="id">
+    <column id="340" parent="288" name="total_capacity">
+      <Position>1</Position>
+      <StateNumber>2821</StateNumber>
+      <StoredType>numeric(38,2 digit)|0s</StoredType>
+      <TypeId>1700</TypeId>
+    </column>
+    <column id="341" parent="288" name="id">
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StateNumber>2639</StateNumber>
-      <StoredType>bigint|0s</StoredType>
-      <SequenceId>44285</SequenceId>
-      <TypeId>20</TypeId>
-    </column>
-    <column id="344" parent="287" name="book_id">
       <Position>2</Position>
-      <StateNumber>2639</StateNumber>
+      <StateNumber>2821</StateNumber>
       <StoredType>bigint|0s</StoredType>
+      <SequenceId>52461</SequenceId>
       <TypeId>20</TypeId>
     </column>
-    <column id="345" parent="287" name="saved_id">
+    <column id="342" parent="288" name="library_id">
       <Position>3</Position>
-      <StateNumber>2639</StateNumber>
+      <StateNumber>2821</StateNumber>
       <StoredType>bigint|0s</StoredType>
       <TypeId>20</TypeId>
     </column>
-    <foreign-key id="346" parent="287" name="fk5fd0g9v1b30ndps0e8x2o60oe">
-      <ColNames>book_id</ColNames>
-      <ObjectId>44300</ObjectId>
-      <StateNumber>2645</StateNumber>
+    <foreign-key id="343" parent="288" name="fkpvfpvcggaj73bvndux426v53f">
+      <ColNames>library_id</ColNames>
+      <ObjectId>52510</ObjectId>
+      <StateNumber>2829</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>44201</RefTableId>
+      <RefTableId>52448</RefTableId>
     </foreign-key>
-    <foreign-key id="347" parent="287" name="fklj9w475v32rm6oyjddlyarjne">
+    <index id="344" parent="288" name="saved_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>52465</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>2821</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <index id="345" parent="288" name="saved_library_id_key">
+      <ColNames>library_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>52467</ObjectId>
+      <StateNumber>2821</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="346" parent="288" name="saved_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>52466</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>2821</StateNumber>
+      <UnderlyingIndexId>52465</UnderlyingIndexId>
+    </key>
+    <key id="347" parent="288" name="saved_library_id_key">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>52468</ObjectId>
+      <StateNumber>2821</StateNumber>
+      <UnderlyingIndexId>52467</UnderlyingIndexId>
+    </key>
+    <column id="348" parent="289" name="book_id">
+      <Position>1</Position>
+      <StateNumber>2822</StateNumber>
+      <StoredType>bigint|0s</StoredType>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="349" parent="289" name="id">
+      <IdentityKind>by-default</IdentityKind>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>2822</StateNumber>
+      <StoredType>bigint|0s</StoredType>
+      <SequenceId>52469</SequenceId>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="350" parent="289" name="saved_id">
+      <Position>3</Position>
+      <StateNumber>2822</StateNumber>
+      <StoredType>bigint|0s</StoredType>
+      <TypeId>20</TypeId>
+    </column>
+    <foreign-key id="351" parent="289" name="fk5fd0g9v1b30ndps0e8x2o60oe">
+      <ColNames>book_id</ColNames>
+      <ObjectId>52515</ObjectId>
+      <StateNumber>2830</StateNumber>
+      <RefKeyColPositions>3</RefKeyColPositions>
+      <RefTableId>52430</RefTableId>
+    </foreign-key>
+    <foreign-key id="352" parent="289" name="fklj9w475v32rm6oyjddlyarjne">
       <ColNames>saved_id</ColNames>
-      <ObjectId>44305</ObjectId>
-      <StateNumber>2646</StateNumber>
-      <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>44280</RefTableId>
+      <ObjectId>52520</ObjectId>
+      <StateNumber>2831</StateNumber>
+      <RefKeyColPositions>2</RefKeyColPositions>
+      <RefTableId>52462</RefTableId>
     </foreign-key>
-    <index id="348" parent="287" name="saved_item_pkey">
+    <index id="353" parent="289" name="saved_item_book_id_key">
+      <ColNames>book_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>52475</ObjectId>
+      <StateNumber>2822</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <index id="354" parent="289" name="saved_item_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>44289</ObjectId>
+      <ObjectId>52473</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>2639</StateNumber>
+      <StateNumber>2822</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="349" parent="287" name="ukr22qswo9u0bjhauckml8tl6l">
-      <ColNames>book_id</ColNames>
-      <ObjectId>44293</ObjectId>
-      <StateNumber>2643</StateNumber>
-      <Unique>1</Unique>
-      <AccessMethodId>403</AccessMethodId>
-    </index>
-    <key id="350" parent="287" name="saved_item_pkey">
+    <key id="355" parent="289" name="saved_item_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>44290</ObjectId>
+      <ObjectId>52474</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>2639</StateNumber>
-      <UnderlyingIndexId>44289</UnderlyingIndexId>
+      <StateNumber>2822</StateNumber>
+      <UnderlyingIndexId>52473</UnderlyingIndexId>
     </key>
-    <key id="351" parent="287" name="ukr22qswo9u0bjhauckml8tl6l">
-      <ObjectId>44294</ObjectId>
-      <StateNumber>2643</StateNumber>
-      <UnderlyingIndexId>44293</UnderlyingIndexId>
+    <key id="356" parent="289" name="saved_item_book_id_key">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>52476</ObjectId>
+      <StateNumber>2822</StateNumber>
+      <UnderlyingIndexId>52475</UnderlyingIndexId>
     </key>
-    <column id="352" parent="288" name="id">
+    <column id="357" parent="290" name="role_id">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>2823</StateNumber>
+      <StoredType>bigint|0s</StoredType>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="358" parent="290" name="user_id">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>2823</StateNumber>
+      <StoredType>bigint|0s</StoredType>
+      <TypeId>20</TypeId>
+    </column>
+    <foreign-key id="359" parent="290" name="fkrhfovtciq1l558cw6udg0h0d3">
+      <ColNames>role_id</ColNames>
+      <ObjectId>52525</ObjectId>
+      <StateNumber>2832</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>52456</RefTableId>
+    </foreign-key>
+    <foreign-key id="360" parent="290" name="fkhfh9dx7w3ubf1co1vdev94g3f">
+      <ColNames>user_id</ColNames>
+      <ObjectId>52530</ObjectId>
+      <StateNumber>2833</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>52481</RefTableId>
+    </foreign-key>
+    <column id="361" parent="291" name="id">
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>2607</StateNumber>
+      <StateNumber>2824</StateNumber>
       <StoredType>bigint|0s</StoredType>
-      <SequenceId>44228</SequenceId>
+      <SequenceId>52480</SequenceId>
       <TypeId>20</TypeId>
     </column>
-    <column id="353" parent="288" name="email">
+    <column id="362" parent="291" name="email">
       <Position>2</Position>
-      <StateNumber>2607</StateNumber>
+      <StateNumber>2824</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="354" parent="288" name="firstname">
+    <column id="363" parent="291" name="firstname">
       <Position>3</Position>
-      <StateNumber>2607</StateNumber>
+      <StateNumber>2824</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="355" parent="288" name="lastname">
+    <column id="364" parent="291" name="lastname">
       <Position>4</Position>
-      <StateNumber>2607</StateNumber>
+      <StateNumber>2824</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="356" parent="288" name="password">
+    <column id="365" parent="291" name="password">
       <Position>5</Position>
-      <StateNumber>2607</StateNumber>
+      <StateNumber>2824</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <index id="357" parent="288" name="users_pkey">
+    <index id="366" parent="291" name="users_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>44234</ObjectId>
+      <ObjectId>52486</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>2607</StateNumber>
+      <StateNumber>2824</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="358" parent="288" name="ukq4gvg4dl2a3fpetfwspodde8e">
+    <index id="367" parent="291" name="ukq4gvg4dl2a3fpetfwspodde8e">
       <ColNames>email</ColNames>
-      <ObjectId>44242</ObjectId>
-      <StateNumber>2615</StateNumber>
+      <ObjectId>52536</ObjectId>
+      <StateNumber>2841</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
       <CollationNames>default</CollationNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="359" parent="288" name="users_pkey">
+    <index id="368" parent="291" name="users_email_key">
+      <ColNames>email</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>44235</ObjectId>
+      <ObjectId>52488</ObjectId>
+      <StateNumber>2824</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationNames>default</CollationNames>
+      <CollationIds>100</CollationIds>
+      <CollationParentNames>pg_catalog</CollationParentNames>
+    </index>
+    <key id="369" parent="291" name="users_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>52487</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>2607</StateNumber>
-      <UnderlyingIndexId>44234</UnderlyingIndexId>
+      <StateNumber>2824</StateNumber>
+      <UnderlyingIndexId>52486</UnderlyingIndexId>
     </key>
-    <key id="360" parent="288" name="ukq4gvg4dl2a3fpetfwspodde8e">
-      <ObjectId>44243</ObjectId>
-      <StateNumber>2615</StateNumber>
-      <UnderlyingIndexId>44242</UnderlyingIndexId>
+    <key id="370" parent="291" name="ukq4gvg4dl2a3fpetfwspodde8e">
+      <ObjectId>52537</ObjectId>
+      <StateNumber>2841</StateNumber>
+      <UnderlyingIndexId>52536</UnderlyingIndexId>
+    </key>
+    <key id="371" parent="291" name="users_email_key">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>52489</ObjectId>
+      <StateNumber>2824</StateNumber>
+      <UnderlyingIndexId>52488</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>

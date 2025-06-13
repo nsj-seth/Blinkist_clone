@@ -63,4 +63,13 @@ public class Book {
                 ", year=" + year +
                 '}';
     }
+
+
+    @PreRemove
+    private void preRemove() {
+        if (savedItem != null) {
+            savedItem.setBook(null);
+        }
+    }
+
 }

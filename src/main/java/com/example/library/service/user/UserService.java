@@ -6,10 +6,8 @@ import com.example.library.dto.SavedItemDto;
 import com.example.library.dto.UserDto;
 import com.example.library.exceptions.AlreadyExistsException;
 import com.example.library.exceptions.ResourceNotFoundException;
-import com.example.library.model.Library;
-import com.example.library.model.Saved;
-import com.example.library.model.SavedItem;
-import com.example.library.model.User;
+import com.example.library.model.*;
+import com.example.library.repository.RoleRepository;
 import com.example.library.repository.UserRepository;
 import com.example.library.requests.CreateUserRequest;
 import com.example.library.requests.UserUpdateRequest;
@@ -17,9 +15,13 @@ import com.example.library.service.library.LibraryService;
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import java.util.HashSet;
 import java.util.Optional;
+import java.util.Set;
 
 @Service
 @RequiredArgsConstructor
@@ -27,6 +29,9 @@ public class UserService implements IUserService {
     private final UserRepository userRepository;
     private final LibraryService libraryService;
     private final ModelMapper modelMapper;
+    private final PasswordEncoder passwordEncoder;
+    private final RoleRepository roleRepository;  // Add this
+
 
     @Override
     public User getUserById(long userId) {
@@ -35,17 +40,26 @@ public class UserService implements IUserService {
     }
 
     @Override
+    @Transactional
     public User createUser(CreateUserRequest request) {
-        return Optional.of(request)
-                .filter(user -> !userRepository.existsByEmail(request.getEmail()))
-                .map(req -> {
-                    User user = new User();
-                    user.setEmail(request.getEmail());
-                    user.setPassword(request.getPassword());
-                    user.setFirstname(request.getFirstname());
-                    user.setLastname(request.getLastname());
+        if (userRepository.existsByEmail(request.getEmail())) {
+            throw new AlreadyExistsException(request.getEmail() + " already exists!");
+        }
 
-                    // First save the user
+        // Get the default USER role
+        Role userRole = roleRepository.findByName("ROLE_USER")
+                .orElseThrow(() -> new RuntimeException("Default role not found"));
+
+        User user = new User();
+        user.setEmail(request.getEmail());
+        user.setPassword(passwordEncoder.encode(request.getPassword()));
+        user.setFirstname(request.getFirstname());
+        user.setLastname(request.getLastname());
+
+        // Set default role
+        user.setRoles(new HashSet<>(Set.of(userRole)));
+
+        // First save the user
                     User savedUser = userRepository.save(user);
 
                     // Then create and set the library
@@ -56,8 +70,8 @@ public class UserService implements IUserService {
                     return userRepository.save(savedUser);
 
 
-                }).orElseThrow(() -> new AlreadyExistsException(request.getEmail()+" already exists!"));
-    }
+}
+
 
     @Override
     public User updateUser(UserUpdateRequest request, Long userId) {
@@ -69,12 +83,20 @@ public class UserService implements IUserService {
     }
 
     @Override
+    @Transactional
     public void deleteUser(Long userId) {
-        userRepository.findById(userId).ifPresentOrElse(userRepository::delete, () -> {
-            throw new ResourceNotFoundException("User not found with id ");
-        });
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new ResourceNotFoundException("User not found with id "));
 
+        if (user.getLibrary() != null && user.getLibrary().getSaved() != null) {
+            // Clear saved items
+            user.getLibrary().getSaved().getSavedItems().clear();
+        }
+
+        userRepository.delete(user);
     }
+
+
 
     @Override
     public UserDto convertUserToDto(User user) {
